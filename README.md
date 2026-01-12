@@ -1,4 +1,4 @@
-# 🎮 Gridlock: NumPy Edition
+# ⚡ GRIDLOCK // ZERO_SUM
 
 [![Python](https://img.shields.io/badge/Python-3.8%2B-blue.svg)](https://www.python.org/)
 [![NumPy](https://img.shields.io/badge/Powered%20By-NumPy-013243.svg)](https://numpy.org/)
