@@ -1,129 +1,114 @@
-# Gridlock Game
-https://gridlock-game-bdoqnt2uavckvypewafl8g.streamlit.app/
-🎮 A NumPy powered Tic Tac Toe style game that demonstrates advanced array manipulation, logical operations, and Python game logic design.
+# 🎮 Gridlock: NumPy Edition
 
-## Project Overview
+[![Python](https://img.shields.io/badge/Python-3.8%2B-blue.svg)](https://www.python.org/)
+[![NumPy](https://img.shields.io/badge/Powered%20By-NumPy-013243.svg)](https://numpy.org/)
+[![Streamlit](https://img.shields.io/badge/UI-Streamlit-FF4B4B.svg)](https://streamlit.io/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-Gridlock is an interactive 3x3 grid game where two players take turns marking their positions. This project showcases practical applications of NumPy arrays for game development, decision logic, and win condition validation.
+**Gridlock** is a high-performance Tic-Tac-Toe engine that demonstrates the power of **NumPy** for game state management, win-condition validation through vectorized operations, and AI decision-making.
 
-## About This Project
+🔗 **[Play the Live Demo](https://gridlock-game-bdoqnt2uavckvypewafl8g.streamlit.app/)**
 
-**Course:** Exercise 4  
-**Topic Covered:** NumPy and Python Logic Building  
-**Difficulty Level:** Intermediate
+---
 
-## Project Description
+## 🚀 Project Overview
 
-Develop a Tic Tac Toe style game named Gridlock, powered by NumPy. The game simulates a 3x3 grid where two players take turns marking their positions. The implementation uses NumPy arrays to represent the grid, handle player moves, and check for winning conditions such as rows, columns, or diagonals. The game incorporates logic for detecting invalid moves and draws, ensuring smooth gameplay through conditionals and loops.
+Gridlock transcends the basic "if-else" Tic-Tac-Toe logic. By representing the 3x3 board as a **2D NumPy NDArray**, the game utilizes mathematical properties to detect wins and calculate AI moves. 
 
-## Skills Covered
+### Key Features
+- **Vectorized Win Detection**: Uses `np.trace()`, `np.sum()`, and slicing rather than nested loops.
+- **Smart AI**: Features three difficulty levels, including a "Smart" mode powered by the **Minimax Algorithm**.
+- **Monte Carlo Simulations**: A built-in simulator that runs up to 5,000 games in seconds to analyze win/loss probabilities using NumPy's speed.
+- **Interactive UI**: A sleek Streamlit interface for seamless browser-based play.
 
-✓ NumPy array manipulation and indexing  
-✓ Logical operations and boolean masking  
-✓ Control flow with conditionals  
-✓ Loop structures and iteration  
-✓ Conditional statements and branching  
-✓ Game logic design and implementation  
-✓ Input validation and error handling  
-✓ Win condition detection algorithms
+---
 
-## What I Learned
+## 🛠️ Tech Stack & Skills
 
-### NumPy Concepts
+| Category | Technologies / Concepts |
+| :--- | :--- |
+| **Core** | Python 3.x, NumPy |
+| **Frontend** | Streamlit |
+| **Algorithms** | Minimax (Decision Trees), Monte Carlo Simulation |
+| **NumPy Skills** | Broadcasting, Boolean Masking, Trace/Diagonal Operations, Slicing |
 
-• Creating and manipulating 2D arrays for grid representation  
-• Using NumPy operations for efficient game state checking  
-• Leveraging array broadcasting for win condition validation  
-• Implementing vectorized operations for game logic  
+---
 
-### Programming Fundamentals
+## 🧠 Technical Deep Dive
 
-• Designing game flow with conditional logic  
-• Implementing nested loops for board traversal  
-• Validating user input and handling edge cases  
-• Structuring code for maintainability and clarity  
+### 1. The NumPy Advantage
+Instead of iterating through rows and columns to find a winner, Gridlock treats the board as a matrix $M$. 
+- **Rows/Cols**: `np.sum(board, axis=0)` and `np.sum(board, axis=1)`
+- **Diagonals**: `board.diagonal()` and `np.fliplr(board).diagonal()`
+This allows for near-instant win validation even during heavy Monte Carlo simulations.
 
-### Problem Solving
+### 2. AI Logic
+- **Easy**: Random sampling of available indices.
+- **Medium**: Heuristic-based moves.
+- **Smart**: A recursive Minimax algorithm that ensures the AI never loses.
 
-• Detecting winning patterns across rows, columns, and diagonals  
-• Implementing move validation to prevent overlapping positions  
-• Designing algorithms to check game draw conditions  
-• Managing game state transitions effectively  
+---
 
-## Project Structure
+## 📂 Project Structure
 
-```
+```text
 Gridlock Game/
-├── main.py              # Game entry point and main loop
-├── app.py               # Application interface
-├── app_structure.py     # Game structure and architecture
-├── grid_game.ipynb      # Jupyter notebook with detailed explanations
-├── requirements.txt     # Python dependencies
-└── README.md           # Project documentation
+├── main.py           # CLI entry point
+├── app.py            # Streamlit UI implementation
+├── engine.py         # The NumPy-powered game core
+├── app_structure.py  # Architectural helper functions
+├── grid_game.ipynb   # Interactive tutorial & logic breakdown
+├── requirements.txt  # Dependencies (numpy, streamlit)
+└── README.md         # Professional documentation
+
 ```
 
-## Files Description
+---
 
-**main.py** - Core game logic and player turn management  
-**app.py** - User interface and game display  
-**app_structure.py** - Game architecture and helper functions  
-**grid_game.ipynb** - Detailed explanations with step by step game logic and NumPy array manipulation concepts
+## ⚙️ Installation & Usage
 
-## Learning Resources
+1. **Clone the repository**
+```bash
+git clone https://github.com/mayank-goyal09/nothing.git
+cd gridlock-game
 
-📚 **[View Practice Notebook](https://github.com/mayank-goyal09/nothing/blob/main/grid_game.ipynb)** - Comprehensive documentation with detailed explanations, NumPy concepts, and step by step logic building
+```
 
-## Technologies Used
 
-• Python 3.x  
-• NumPy  
+2. **Install dependencies**
+```bash
+pip install -r requirements.txt
 
-## How to Run
+```
 
-1. Install dependencies  
-   ```bash
-   pip install numpy
-   ```
 
-2. Run the game  
-   ```bash
-   python main.py
-   ```
+3. **Run the Web App**
+```bash
+streamlit run app.py
 
-## Key Takeaways
+```
 
-This project reinforced the importance of efficient data structures like NumPy arrays for game development. Through building Gridlock, I gained practical experience in implementing complex game logic, understanding win condition algorithms, and writing clean, maintainable Python code. The experience highlighted how mathematical operations and array manipulation can elegantly solve game logic problems.
+
+4. **Run the CLI Version**
+```bash
+python main.py
+
+```
+
+
 
 ---
 
-## 🎮 Live Demo
+## 📊 Monte Carlo Insights
 
-**Play the game live here:** [Gridlock: NumPy Edition](https://gridlock-game-bdoqnt2uavckvypewafl8g.streamlit.app/)
-
-This interactive Streamlit app brings Gridlock to life with:
-
-### Features
-
-- **Interactive Gameplay**: Play against AI with multiple difficulty levels (Easy, Medium, Smart)
-- **Real-time Board Display**: Visual 3x3 grid showing current game state
-- **Score Tracking**: Keep track of wins, losses, and draws across multiple rounds
-- **AI Difficulty Levels**:
-  - **Easy**: Random moves
-  - **Medium**: Mixed strategy with some intelligent moves
-  - **Smart**: Optimal minimax algorithm for unbeatable gameplay
-- **Monte Carlo Simulations**: Run statistical analysis on game outcomes with configurable simulation counts (100-5000 games)
-- **Game Reset Options**:
-  - New Round: Start fresh while keeping scores
-  - Reset Score: Clear all statistics
-
-### Tech Stack
-
-- **Frontend**: Streamlit for interactive UI
-- **Backend**: NumPy-powered game engine (`engine.py`)
-- **AI Algorithm**: Minimax decision tree for optimal play
-- **Analysis**: Monte Carlo simulation for win/draw probability analysis
+The project includes a simulation module. By running thousands of randomized games, users can visualize the statistical likelihood of a "Draw" vs. a "Win" based on different starting positions, demonstrating the mathematical balance of the game.
 
 ---
 
-**Author:** Mayank Goyal  
-**Date:** November 2025
+## ✍️ Author
+
+**Mayank Goyal** *Course: Exercise 4 - NumPy and Python Logic Building* *Date: November 2025*
+
+---
+
+⭐ *If you find this project helpful for learning NumPy, feel free to give it a star!*
