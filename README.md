@@ -11,6 +11,7 @@
 
 ---
 
+
 ## 🚀 Project Overview
 
 Gridlock transcends the basic "if-else" Tic-Tac-Toe logic. By representing the 3x3 board as a **2D NumPy NDArray**, the game utilizes mathematical properties to detect wins and calculate AI moves. 
