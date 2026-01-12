@@ -1,5 +1,5 @@
 # Gridlock Game
-
+https://gridlock-game-bdoqnt2uavckvypewafl8g.streamlit.app/
 🎮 A NumPy powered Tic Tac Toe style game that demonstrates advanced array manipulation, logical operations, and Python game logic design.
 
 ## Project Overview
@@ -93,6 +93,35 @@ Gridlock Game/
 ## Key Takeaways
 
 This project reinforced the importance of efficient data structures like NumPy arrays for game development. Through building Gridlock, I gained practical experience in implementing complex game logic, understanding win condition algorithms, and writing clean, maintainable Python code. The experience highlighted how mathematical operations and array manipulation can elegantly solve game logic problems.
+
+---
+
+## 🎮 Live Demo
+
+**Play the game live here:** [Gridlock: NumPy Edition](https://gridlock-game-bdoqnt2uavckvypewafl8g.streamlit.app/)
+
+This interactive Streamlit app brings Gridlock to life with:
+
+### Features
+
+- **Interactive Gameplay**: Play against AI with multiple difficulty levels (Easy, Medium, Smart)
+- **Real-time Board Display**: Visual 3x3 grid showing current game state
+- **Score Tracking**: Keep track of wins, losses, and draws across multiple rounds
+- **AI Difficulty Levels**:
+  - **Easy**: Random moves
+  - **Medium**: Mixed strategy with some intelligent moves
+  - **Smart**: Optimal minimax algorithm for unbeatable gameplay
+- **Monte Carlo Simulations**: Run statistical analysis on game outcomes with configurable simulation counts (100-5000 games)
+- **Game Reset Options**:
+  - New Round: Start fresh while keeping scores
+  - Reset Score: Clear all statistics
+
+### Tech Stack
+
+- **Frontend**: Streamlit for interactive UI
+- **Backend**: NumPy-powered game engine (`engine.py`)
+- **AI Algorithm**: Minimax decision tree for optimal play
+- **Analysis**: Monte Carlo simulation for win/draw probability analysis
 
 ---
 
